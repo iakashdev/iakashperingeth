@@ -23,7 +23,7 @@ function App() {
 
         <div className='About'>
 
-          <p className="para">"Developer by day, bug-squasher by night.<br />
+          <p className="para">"Dev by day, bug-squasher by night<br />
             I don't always write perfect code,<br /> but I sure make it look pretty."</p>
           <div className="row">
             <button className='Aboutmebtn'>My Journey</button>
