@@ -14,36 +14,52 @@ body {
   src: url('./assets/fonts/Heathergreen.otf') format('opentype');
 }
 
-.base-wrapper{
-  margin: 0;
-  padding: 0;
-  background-color: transparent; /* Changed from black */
+/* Three.js Canvas */
+.three-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Content containers */
+.base-wrapper {
+  position: relative;
+  z-index: 1;
   min-height: 100vh;
 }
+
 .top-container {
-  background-color: transparent; /* Changed from black */
+  background-color: transparent;
   height: 100px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   gap: 20px;
   padding: 25px;
+  position: relative;
+  z-index: 2;
 }
 
-.bottom-container{
+.bottom-container {
   display: flex;
   height: 635px;
   width: 100%;
-  background-color: transparent !important; /* Add this */
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
 }
-.about{
-  background-color: transparent; /* Changed from black */
+
+.about {
+  background-color: transparent;
   height: 635px;
   width: 50%;
 }
 
-.aboutimg{
-  background-color: transparent; /* Changed from black */
+.aboutimg {
+  background-color: transparent;
   height: 635px;
   width: 50%;
   display: flex;
@@ -51,50 +67,46 @@ body {
   justify-content: center;
 }
 
-.Pimage{
+.Pimage {
   height: 266px;
   width: 266px;
   margin-top: -36px;
-
 }
 
-.line1{
-   font-family: 'Font1', sans-serif;
+.line1 {
+  font-family: 'Font1', sans-serif;
   margin-top: 20%;
   margin-left: 200px;
-    font-size: 60px;
-
+  font-size: 60px;
 }
 
-.line2{
-     font-family: 'Font1', sans-serif;
-   margin-left: 200px;
-   font-size: 150px;
-   margin-top: -50px;
-
+.line2 {
+  font-family: 'Font1', sans-serif;
+  margin-left: 200px;
+  font-size: 150px;
+  margin-top: -50px;
 }
 
-.line3{
-     font-family: 'Font1', sans-serif;
+.line3 {
+  font-family: 'Font1', sans-serif;
   margin-top: -30px;
   margin-left: 200px;
-color: rgb(189, 189, 189);
-
+  color: rgb(189, 189, 189);
 }
 
-.txtclr{
- color: rgb(236, 236, 236);
+.txtclr {
+  color: rgb(236, 236, 236);
 }
 
-.optns{
+.optns {
   color: aliceblue;
   margin-right: 50px;
-font-size: 30px;
-font-family: 'Font1', sans-serif;
+  font-size: 30px;
+  font-family: 'Font1', sans-serif;
 }
 
-
-/* Stars background - ADD ONLY THESE LINES */
+/* REMOVE THESE - they conflict with Three.js */
+/*
 .stars-background {
   position: fixed;
   top: 0;
@@ -110,3 +122,4 @@ font-family: 'Font1', sans-serif;
   background-color: white;
   border-radius: 50%;
 }
+*/
