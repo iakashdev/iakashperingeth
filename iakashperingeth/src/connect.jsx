@@ -68,6 +68,7 @@ function Connect() {
                 required 
               />
             </div>
+            
             <div className="form-group">
               <textarea 
                 className="form-textarea" 
