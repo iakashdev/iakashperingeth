@@ -1,3 +1,6 @@
+
+
+
 body {
   margin: 0;
   padding: 0;
@@ -13,6 +16,15 @@ body {
   font-family: 'Font1';
   src: url('./assets/fonts/Heathergreen.otf') format('opentype');
 }
+
+
+@font-face {
+  font-family: 'poppins';
+  src: url('./assets/fonts/Poppins-ExtraBold.ttf') format('opentype');
+}
+
+
+
 
 /* Three.js Canvas */
 .three-canvas {
@@ -88,7 +100,7 @@ body {
 }
 
 .line3 {
-  font-family: 'Font1', sans-serif;
+  font-family: 'poppins', sans-serif;
   margin-top: -30px;
   margin-left: 200px;
   color: rgb(189, 189, 189);
@@ -105,21 +117,167 @@ body {
   font-family: 'Font1', sans-serif;
 }
 
-/* REMOVE THESE - they conflict with Three.js */
-/*
-.stars-background {
-  position: fixed;
-  top: 0;
-  left: 0;
+.path_base {
   width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
+  height: 100vh;
+  /* Use viewport height */
+
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* Ensure it's positioned */
+  z-index: 2;
+  /* Bring above Starfield if needed */
 }
 
-.star {
-  position: absolute;
-  background-color: white;
-  border-radius: 50%;
+.p_block {
+  width: 300px;
+  height: 450px;
+  background-color: rgb(39, 39, 39);
+  stroke: rgb(32, 254, 180);
+
+
+  z-index: 2;
+  /* Add border to see edges clearly */
 }
-*/
+
+
+
+.pjct_about {
+  display: flex;
+  align-items: center;
+  height: 635px;
+  z-index: 2;
+  width: 50%;
+
+
+}
+
+.pjct_space {
+
+
+  display: flex;
+  height: 635px;
+
+  width: 50%;
+  z-index: 2;
+
+}
+
+
+.bottom-container2 {
+  .pjct_container {
+    display: flex;
+    /* puts both divs side-by-side */
+    width: 100%;
+    height: 635px;
+  }
+
+
+  .pjct_space {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .scrollable-div {
+    height: 82vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 1rem;
+    border-radius: 8px;
+    /* background: rgba(255, 255, 255, 0.05); */
+    backdrop-filter: blur(10px);
+
+    /* Hide scrollbar for all browsers */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+  }
+
+  .scrollable-div::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+  }
+
+  .scroll-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .project-item {
+    padding: 2rem;
+    /* background: rgba(255, 255, 255, 0.08); */
+
+     background: rgba(255, 255, 255, 0.008);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+  }
+
+  .project-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .project-item h3 {
+    margin: 0 0 1rem 0;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .project-item p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+
+  /* Smooth scrolling for better swipe experience */
+  .scrollable-div {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+  }
+
+  /* Optional: Add some spacing at the bottom for better scrolling */
+  .scroll-content {
+    padding-bottom: 2rem;
+  }
+
+
+
+
+  .path_base {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 20px;
+  }
+
+  .path_base {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    gap: 20px;
+    padding: 50px 20px;
+  }
+
+  .line4{
+    color: #ffffffde;
+ font-size:  30px;
+ padding-left: 20px; 
+ 
+ opacity: 50%;
+  }
+
+}
